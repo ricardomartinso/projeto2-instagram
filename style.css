@@ -7,6 +7,9 @@ body {
 * {
     box-sizing: border-box;
 }
+strong {
+    font-weight: bold;
+}
 .container {
     width: 935px;
     height: auto;
@@ -75,11 +78,18 @@ nav {
     display: flex;
     text-align: center;
     justify-content: center;
+    font-size: 12px;
 }
 .storie img {
     width: 66px;
     height: 66px;
-    border-radius: 33px;
+    border: double 3px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top right, #f2803d,#d9297c);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    
 }
 .sidebar {
     display: flex;
@@ -100,6 +110,9 @@ nav {
     font-weight: bold; 
     font-size: 14px; 
     margin-bottom: 5px;
+}
+.barra-superior-left .usuario {
+    margin: 0 0 0 15px;
 }
 .usuario-name {
     font-weight: lighter; 
@@ -122,15 +135,19 @@ ion-icon {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
+    margin-bottom: 10px;
 }
 .posts {
-    border: 1px solid #DBDBDB;
     background-color: white;
-    height: 61px;
+    height: auto;
+    border: 1px solid #DBDBDB;
+    width: 614px;
+    margin-bottom: 50px;
 }
 .posts img {
-    width: 612px;
+    width: 100%;
     height: 614px;
+
 }
 .barra-superior {
     display: flex;
@@ -138,18 +155,52 @@ ion-icon {
     align-items: center;
     width: 100%;
     height: 61px;
+
 }
+.barra-superior-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+}
+
 .barra-superior img {
     width: 32px;
     height: 32px;
     margin-left: 17px;
 }
-.barra-superior p {
+.barra-superior ion-icon {
     margin-right: 17px;
+    font-weight: bold;
 }
 
-
-
+.barra-inferior {
+    width: 100%;
+}
+.barra-inferior img {
+    width: 20px;
+    height: 20px;
+}
+.barra-inferior-icones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px;
+}
+.barra-inferior-curtidas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 14px 14px;
+}
+.barra-inferior-curtidas p {
+    margin-left: 14px;
+}
+.icones-left {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
 
 
 
