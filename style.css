@@ -7,6 +7,13 @@ body {
 * {
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.logo-mobile {
+    display: none;
+}
 .medium50012px {
     font-size: 12px;
     font-weight: 500;
@@ -339,5 +346,11 @@ ion-icon {
     }
     .barra-inferior-curtidas p {
         font-size: 15px;
+    }
+    .barra-pesquisa {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
     }
 }
