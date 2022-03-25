@@ -14,6 +14,14 @@ a {
 .logo-mobile {
     display: none;
 }
+.navegacao-inferior-mobile {
+    display: none;
+}
+.separator {
+    height: 22px;
+    width: 1px;
+    background-color: #dbdbdb;
+}
 .medium50012px {
     font-size: 12px;
     font-weight: 500;
@@ -33,10 +41,11 @@ strong {
     font-weight: bold;
 }
 .container {
-    width: 935px;
+    width: 100%;
     height: auto;
     margin: 88px auto 0 auto;
     display: flex;
+    justify-content: center;
 }
 nav {
     display: flex;
@@ -66,7 +75,10 @@ nav {
 
 }
 .icone-esquerda img {
-    margin-left: 12px;
+    margin-left: 10px;
+}
+.icone-esquerda ion-icon {
+    margin-right: 10px;
 }
 
 .icones-direita {
@@ -116,14 +128,14 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 293px;
-    height: auto;
+    width: 292px;
     margin-top: 23px;
     margin-left: 29px;
+    margin-right: 5px;
 }
 .perfil {
     display: flex;
-    width: 293px;
+    width: 100%;
     align-items: center;
     justify-content:flex-start;
 }
@@ -289,10 +301,10 @@ ion-icon {
         margin: 88px auto 0 auto;
     }
     .posts {
-        width: 600px;
+        width: 598.5px;
     }
     .stories {
-        width: 600px;
+        width: 598.5px;
     }
     .barra-superior img {
         width: 32px;
@@ -308,6 +320,7 @@ ion-icon {
 @media (max-width: 614px) {
     .container {
         margin-top: 54px;
+        flex-direction: column;
     }
     .conteudo {
         width: 100%;
@@ -352,5 +365,28 @@ ion-icon {
     }
     .logo-mobile {
         display: block;
+    }
+    .navegacao-inferior-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 54px;
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        z-index: 1;
+    }
+    .icones-inferior {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .icones-inferior:first-child {
+        margin-left: 24px;
+    }
+    .icones-inferior:last-child {
+        margin-right: 22px;
     }
 }
