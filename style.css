@@ -80,18 +80,28 @@ nav {
 .icone-esquerda ion-icon {
     margin-right: 10px;
 }
-
+.barra-pesquisa {
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    width: 218px;
+    height: 28px;
+    text-align: center;
+}
 .icones-direita {
     display: flex;
     justify-content: space-between;
     width: 128px;
 }
 .conteudo {
-    width: 614px;
+    display: flex;
+    width: 935px;
     height: auto;
+}
+.conteudo-esquerda {
+    width: 614px;
     
 }
-
 .stories {
     display: flex;
     justify-content: space-between;
@@ -101,7 +111,15 @@ nav {
     border: 1px solid #DBDBDB;
     border-radius: 5px;
     height: 118px;
+    position: relative;
 }
+.setinha {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    
+}
+
 .storie {
     width: 66px;
     margin-right: 14px;
@@ -114,13 +132,13 @@ nav {
     text-align: center;
     justify-content: center;
     font-size: 12px;
-}
+} 
 .storie img {
     width: 66px;
     height: 66px;
-    border: double 3px transparent;
+    border: double 2px transparent;
     border-radius: 80px;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top right, #f2803d,#d9297c);
+    background-image: linear-gradient(white, white), radial-gradient(circle at top right, #F89D4E,#d9297c);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
@@ -128,10 +146,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 292px;
-    margin-top: 23px;
-    margin-left: 29px;
-    margin-right: 5px;
+    width: 285px;
+    margin-left: 30px;
+    padding-top: 24px;
+    position: fixed;
+    top: calc(54px + 34px);
 }
 .perfil {
     display: flex;
@@ -143,6 +162,12 @@ nav {
     font-weight: bold; 
     font-size: 14px; 
     margin-bottom: 5px;
+}
+.copyright p {
+    font-size: 11px;
+    font-weight: 400;
+    color: #a09c9c;
+    margin-top: 18px;
 }
 .barra-superior-left .usuario {
     margin: 0 0 0 15px;
@@ -182,6 +207,9 @@ nav {
     display: flex;
     align-items: center;
 }
+.seguir:hover {
+    filter: brightness(1.20);
+}
 .perfil-descricao {
     margin-left: 10px;
 }
@@ -191,10 +219,6 @@ nav {
     border-radius: 28px;
 }
 
-ion-icon {
-    width: 20px;
-    height: 20px;
-}
 .coluna-posts {
     display: flex;
     flex-direction: column;
@@ -211,8 +235,8 @@ ion-icon {
 .posts img {
     width: 100%;
     height: 614px;
-
 }
+
 .barra-superior {
     display: flex;
     justify-content: space-between;
@@ -270,13 +294,18 @@ ion-icon {
 
 
 
-
-
-
-
-
-
-
+.setinha ion-icon {
+    font-size: 32px;
+}
+nav ion-icon {
+    font-size: 22px;
+}
+.barra-inferior-icones ion-icon {
+    font-size: 18px;
+}
+.barra-superior ion-icon {
+    font-size: 18px;
+}
 
 
 
@@ -290,8 +319,15 @@ ion-icon {
 
 
 @media (max-width: 935px) {
+    .conteudo-direita {
+        display: none;
+    }
     .sidebar {
         display: none;
+    }
+    .conteudo {
+        justify-content: center;
+        
     }
     .container {
         display: flex;
@@ -325,11 +361,17 @@ ion-icon {
     .conteudo {
         width: 100%;
     }
+    .conteudo-esquerda {
+        width: 100%;
+    }
     .stories {
         width: 100%;
         height: 121px;
         border-radius: 0;
         background-color: #E5E5E5;
+    }
+    .setinha {
+        display: none;
     }
     .posts {
         width: 100%;
@@ -360,11 +402,17 @@ ion-icon {
     .barra-inferior-curtidas p {
         font-size: 15px;
     }
+    .barra-inferior-icones {
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
     .barra-pesquisa {
         display: none;
     }
     .logo-mobile {
         display: block;
+        width: 100%;
+        text-align: center;
     }
     .navegacao-inferior-mobile {
         display: flex;
@@ -382,6 +430,9 @@ ion-icon {
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+    .icones-inferior ion-icon {
+        font-size: 22px;
     }
     .icones-inferior:first-child {
         margin-left: 24px;
