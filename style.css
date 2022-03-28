@@ -143,14 +143,21 @@ nav {
     text-overflow: ellipsis;
 
 } 
-.storie img {
+.storie-main {
     width: 66px;
-    height: 66px;
+    height: 67px;
     border: double 2px transparent;
     border-radius: 80px;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top right, #F89D4E,#d9297c);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    position: relative;
+    margin-left: 2.5px;
+    margin-top: 1.5px;
+}
+.storie-background img {
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    background-color: transparent;
 }
 .sidebar {
     display: flex;
@@ -209,16 +216,23 @@ nav {
 .sugestoes-caixa-left img {
     width: 32px;
     height: 32px;
+    border-radius: 50%;
 }
 .seguir {
-    color: #139EF2;
+    display: flex;
+    align-items: center;
+}
+.seguir a {
+    color:#139EF2;
     font-size: 12px;
     font-weight:500;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
-.seguir:hover {
-    filter: brightness(1.20);
+.seguir a:hover {
+    color: #71bbec;
+    
 }
 .perfil-descricao {
     margin-left: 10px;
@@ -531,3 +545,11 @@ nav ion-icon {
         margin-bottom: 7px;
     }
 }
+
+
+
+
+
+
+
+
